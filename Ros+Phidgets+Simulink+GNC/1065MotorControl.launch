@@ -1,0 +1,24 @@
+<!--
+  Launcher for 1065 Phidgets Motor Controller board
+  Change the serial numbers as needed.  The serial numbers can be viewed by running:
+      rosrun phidgets Manager
+  This requires:
+      2 x Phidgets 1065 board
+      
+  -->
+<launch>
+    <!-- Machine settings. See http://www.ros.org/wiki/roslaunch/XML/machine -->
+    <machine name="local_alt" address="localhost" default="true" />
+    <!-- phidgets 1065 motor controllers -->
+    <node ns= "left" pkg="phidgets" type="1065MotorController" name="Board1" respawn="true">
+        <!-- phidget device serial number for the left board -->
+        <param name="serial" value="389246" />
+    </node>
+    <node ns= "right" pkg="phidgets" type="1065MotorController" name="Board2" respawn="true">
+        <!-- phidget device serial number for the right board -->
+        <param name="serial" value="350371" />
+    </node>
+    
+ 
+</launch>
+
