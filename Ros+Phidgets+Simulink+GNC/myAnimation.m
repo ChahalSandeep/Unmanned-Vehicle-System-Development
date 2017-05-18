@@ -1,8 +1,4 @@
 function []=myAnimation(xActEst,yActEst,thetaAct,X_array,Y_array,rp1,rp2)
-% to animate the motion of the UGV through assigned wayPoints
-% Atilla Dogan, 20141101
-% XX4378/XX5378 - Intro to UVS - Fall 2014
-
 ugvWidth= 2*0.3556;
 ugvLength=2*0.4635;
 ugvShape = [-ugvLength/2 -ugvLength/2 ugvLength/2 ugvLength/2;
